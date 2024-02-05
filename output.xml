@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20240129 16:55:12.684" rpa="false" schemaversion="4">
+<suite id="s1" name="OrangeHRM Automation Project" source="C:\Users\nl3019\PycharmProjects\OrangeHRM_Automation_Project">
+<suite id="s1-s1" name="Test Cases" source="C:\Users\nl3019\PycharmProjects\OrangeHRM_Automation_Project\Test Cases">
+<suite id="s1-s1-s1" name="Test Admin" source="C:\Users\nl3019\PycharmProjects\OrangeHRM_Automation_Project\Test Cases\Test_Admin.robot">
+<test id="s1-s1-s1-t1" name="Validate Admin/User Management page" line="9">
+<kw name="Open browser with valid login page" library="Key_LoginPage">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240129 16:55:12.902" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240129 16:55:12.901" endtime="20240129 16:55:16.853"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240129 16:55:16.853" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20240129 16:55:16.853" endtime="20240129 16:55:22.244"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240129 16:55:22.244" endtime="20240129 16:55:22.357"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEXT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240129 16:55:22.357" endtime="20240129 16:55:22.793"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Landed to login page</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240129 16:55:22.794" level="INFO">Landed to login page</msg>
+<status status="PASS" starttime="20240129 16:55:22.794" endtime="20240129 16:55:22.794"/>
+</kw>
+<status status="PASS" starttime="20240129 16:55:12.901" endtime="20240129 16:55:22.794"/>
+</kw>
+<kw name="Fill Login details with valid credentials" library="Key_LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:22.795" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:22.795" endtime="20240129 16:55:22.851"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:22.852" level="INFO">Typing text 'Admin' into text field 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:22.851" endtime="20240129 16:55:22.921"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:22.921" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:22.921" endtime="20240129 16:55:22.953"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:22.953" level="INFO">Typing text 'admin123' into text field 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:22.953" endtime="20240129 16:55:23.000"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:23.001" level="INFO">Clicking button 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20240129 16:55:23.000" endtime="20240129 16:55:24.244"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${CHECK_FOR_SUCCSSESFUL_LOGIN}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240129 16:55:24.244" endtime="20240129 16:55:24.670"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20240129 16:55:24.677" level="INFO">OrangeHRM</msg>
+<status status="PASS" starttime="20240129 16:55:24.671" endtime="20240129 16:55:24.677"/>
+</kw>
+<status status="PASS" starttime="20240129 16:55:22.794" endtime="20240129 16:55:24.677"/>
+</kw>
+<kw name="Verify that only users with admin credentials can access the admin page." library="Key_AdminPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Is_LoggedIn?}</var>
+<arg>${Is_Dashboard_Visible?}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:24.699" level="INFO">${Is_LoggedIn?} = Dashboard</msg>
+<status status="PASS" starttime="20240129 16:55:24.678" endtime="20240129 16:55:24.699"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Is_LoggedIn?}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240129 16:55:24.699" level="INFO">Dashboard</msg>
+<status status="PASS" starttime="20240129 16:55:24.699" endtime="20240129 16:55:24.699"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240129 16:55:29.702" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240129 16:55:24.701" endtime="20240129 16:55:29.702"/>
+</kw>
+<status status="PASS" starttime="20240129 16:55:24.677" endtime="20240129 16:55:29.702"/>
+</kw>
+<kw name="Validate if admin can ADD, EDIT and Delete the user" library="Key_AdminPage">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${ADMIN_BUTTON}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:29.704" level="INFO">Double clicking element 'xpath://*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20240129 16:55:29.703" endtime="20240129 16:55:30.991"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240129 16:55:33.992" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240129 16:55:30.991" endtime="20240129 16:55:33.992"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element_text}</var>
+<arg>${Get_PageTitle}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:34.034" level="INFO">${element_text} = Admin
+User Management</msg>
+<status status="PASS" starttime="20240129 16:55:33.992" endtime="20240129 16:55:34.034"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ADD_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:34.035" level="INFO">Clicking button 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button'.</msg>
+<status status="PASS" starttime="20240129 16:55:34.034" endtime="20240129 16:55:34.520"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240129 16:55:36.521" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240129 16:55:34.520" endtime="20240129 16:55:36.521"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element_text}</var>
+<arg>${Get_PageTitle}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.560" level="INFO">${element_text} = Admin</msg>
+<status status="PASS" starttime="20240129 16:55:36.521" endtime="20240129 16:55:36.560"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_USER_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.561" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.560" endtime="20240129 16:55:36.605"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADMIN_ROLE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.606" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.605" endtime="20240129 16:55:36.644"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EMPLOYEE_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.644" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.644" endtime="20240129 16:55:36.701"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMPLOYEE_NAME}</arg>
+<arg>Michele Mix</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.701" level="INFO">Typing text 'Michele Mix' into text field 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.701" endtime="20240129 16:55:36.758"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${STATUS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.759" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div/div[2]/i'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.758" endtime="20240129 16:55:36.796"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${STATUS_ENABLE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.796" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.796" endtime="20240129 16:55:36.838"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ENTER_USERNAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.839" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.838" endtime="20240129 16:55:36.880"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ENTER_USERNAME}</arg>
+<arg>Michele5555</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.881" level="INFO">Typing text 'Michele5555' into text field 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.880" endtime="20240129 16:55:36.945"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ENTER_PASSWORD}</arg>
+<arg>mic@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:36.945" level="INFO">Typing text 'mic@123' into text field 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:36.945" endtime="20240129 16:55:37.036"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ENTER_CONFIRM_PASSWORD}</arg>
+<arg>mic@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:37.037" level="INFO">Typing text 'mic@123' into text field 'XPATH://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20240129 16:55:37.037" endtime="20240129 16:55:37.129"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SAVE_EMPLOYEE_DETAIL}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240129 16:55:37.130" level="INFO">Clicking button 'xpath://*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20240129 16:55:37.129" endtime="20240129 16:55:37.185"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240129 16:55:42.186" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240129 16:55:37.185" endtime="20240129 16:55:42.186"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20240129 16:55:42.186" endtime="20240129 16:55:42.294"/>
+</kw>
+<status status="PASS" starttime="20240129 16:55:29.703" endtime="20240129 16:55:42.295"/>
+</kw>
+<status status="PASS" starttime="20240129 16:55:12.901" endtime="20240129 16:55:42.295"/>
+</test>
+<status status="PASS" starttime="20240129 16:55:12.704" endtime="20240129 16:55:42.295"/>
+</suite>
+<status status="PASS" starttime="20240129 16:55:12.703" endtime="20240129 16:55:42.297"/>
+</suite>
+<status status="PASS" starttime="20240129 16:55:12.685" endtime="20240129 16:55:42.298"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="OrangeHRM Automation Project">OrangeHRM Automation Project</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Cases">OrangeHRM Automation Project.Test Cases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Admin">OrangeHRM Automation Project.Test Cases.Test Admin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
